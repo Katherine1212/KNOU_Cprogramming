@@ -1,28 +1,15 @@
 #include <stdio.h>
-#pragma warning (disable:4996)
 
 void main() {
-	int in_money, coin_500, coin_100, coin_50, coin_10;
-	printf("동전으로 교환할 금액은?");
-	scanf("%d", &in_money);
-	
-	// 500
-	coin_500 = in_money / 500;
-	in_money = in_money % 500;
-	// 100
-	coin_100 = in_money / 100;
-	in_money = in_money % 100;
-	// 50
-	coin_50 = in_money / 50;
-	in_money = in_money % 50;
-	// 10
-	coin_10 = in_money / 10;
-	in_money = in_money % 10;
+	int i = 873;
+	float f = 123.4567;
+	char s[] = "Happy Birthday";
 
-	printf("\n 오백 원짜리 => %d 개 \n", coin_500);
-	printf("백 원짜리 => %d 개 \n", coin_100);
-	printf("오십 원짜리 => %d 개 \n", coin_50);
-	printf("십 원짜리 => %d 개 \n", coin_10);
-	printf("바꾸지 못한 잔돈 => %d 원 \n", in_money);
+	printf("정수형 자료의 출력 \n");
+	printf("\t %04d \n \t %09d \n\n", i, i);
+	printf("실수형 자료의 출력 \n");
+	printf("\t %.3f \n \t %.3e \n\n", f, f);
+	printf("문자열의 출력 \n");
+	printf("\t %.11s \n", s);
 
 }
